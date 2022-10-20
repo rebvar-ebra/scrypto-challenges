@@ -1,0 +1,10 @@
+/home/rebrahimy/Desktop/webApplication/scrypto/scrypto-challenges/smaller-challenges/alsovaros/target/debug/deps/version_check-221f2cb7404a3736.rmeta: /home/rebrahimy/.cargo/registry/src/github.com-1ecc6299db9ec823/version_check-0.9.4/src/lib.rs /home/rebrahimy/.cargo/registry/src/github.com-1ecc6299db9ec823/version_check-0.9.4/src/version.rs /home/rebrahimy/.cargo/registry/src/github.com-1ecc6299db9ec823/version_check-0.9.4/src/channel.rs /home/rebrahimy/.cargo/registry/src/github.com-1ecc6299db9ec823/version_check-0.9.4/src/date.rs
+
+/home/rebrahimy/Desktop/webApplication/scrypto/scrypto-challenges/smaller-challenges/alsovaros/target/debug/deps/libversion_check-221f2cb7404a3736.rlib: /home/rebrahimy/.cargo/registry/src/github.com-1ecc6299db9ec823/version_check-0.9.4/src/lib.rs /home/rebrahimy/.cargo/registry/src/github.com-1ecc6299db9ec823/version_check-0.9.4/src/version.rs /home/rebrahimy/.cargo/registry/src/github.com-1ecc6299db9ec823/version_check-0.9.4/src/channel.rs /home/rebrahimy/.cargo/registry/src/github.com-1ecc6299db9ec823/version_check-0.9.4/src/date.rs
+
+/home/rebrahimy/Desktop/webApplication/scrypto/scrypto-challenges/smaller-challenges/alsovaros/target/debug/deps/version_check-221f2cb7404a3736.d: /home/rebrahimy/.cargo/registry/src/github.com-1ecc6299db9ec823/version_check-0.9.4/src/lib.rs /home/rebrahimy/.cargo/registry/src/github.com-1ecc6299db9ec823/version_check-0.9.4/src/version.rs /home/rebrahimy/.cargo/registry/src/github.com-1ecc6299db9ec823/version_check-0.9.4/src/channel.rs /home/rebrahimy/.cargo/registry/src/github.com-1ecc6299db9ec823/version_check-0.9.4/src/date.rs
+
+/home/rebrahimy/.cargo/registry/src/github.com-1ecc6299db9ec823/version_check-0.9.4/src/lib.rs:
+/home/rebrahimy/.cargo/registry/src/github.com-1ecc6299db9ec823/version_check-0.9.4/src/version.rs:
+/home/rebrahimy/.cargo/registry/src/github.com-1ecc6299db9ec823/version_check-0.9.4/src/channel.rs:
+/home/rebrahimy/.cargo/registry/src/github.com-1ecc6299db9ec823/version_check-0.9.4/src/date.rs:
