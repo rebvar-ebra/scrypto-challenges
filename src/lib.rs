@@ -122,17 +122,18 @@ blueprint! {
             let escrow_obligations: Bucket = ResourceBuilder::new_non_fungible()
                 .metadata("team-member-1-github-username", "martontemesvari")
                 .metadata("team-member-2-github-username", "rebvar-ebra")
-                .metadata("team-member-3-github-username", "arashpoorakbar")
-                .metadata("description", *This resource describes the team members.*)
+                .metadata("team-member-3-github-username", "arash.poorakbar")
+                .metadata("description", "This resource describes the team members.")
                 .initial_supply([
-                   {
-                       NonFungibleId: from_u32(1),
+                   (
+                       NonFungibleId::from_u32(1),
                        party_1_obligation
-                   },
-                   {
-                       NonFungibleId::fron_u32(2),
+                    )
+                   ,
+                   
+                     (  NonFungibleId::fron_u32(2),
                        party_2_obligation
-                   },
+                ),
                 ]);
 
             let mut vaults: BTreeMap<ResourceSpecifier, Vault> =  BTreeMap::new();
@@ -206,7 +207,6 @@ blueprint! {
         ///
         /// [`Bucket`] - A bucket containing any excess tokens that were sent to this method.
         pub fn deposit(&mut self, obligation_badge: Proof, mut funds: Bucket) -> Bucket {
-            // TODO: Complete this function yourself.
             let obligation_badge: ValidatedProof = obligation_badge
                 .validate_proof(self.fobligation_non_fungible_resource)
                 .expect("Invalid badge provided");
@@ -216,8 +216,9 @@ blueprint! {
 
             let funds_to_deposit: Bucket = match obligation.amount_to_pay {
                 ResourceSpecifier::Fungible { amount, .. } => funds.take(amount),
-                ResourceSpecifier ::NonFungible { non_fungible_ids, .. } => {funds.take_non_fungibles(&non_fungible_ids)
-            };
+                ResourceSpecifier::NonFungible { non_fungible_ids, .. } => 
+                    funds.take_non_fungibles(&non_fungible_ids)
+                 };
 
             vault.put(funds_to_deposit());
             funds
@@ -254,8 +255,8 @@ blueprint! {
         ///
         /// [`Bucket`] - A bucket containing the owed tokens.
         pub fn withdraw(&mut self, obligation_badge: Proof) -> Bucket {
-            // TODO: Complete this function yourself.
-            assert!(
+    
+                assert!(
                 self.is_escrow_fulfilled(),
                 "You can not withdrawn your funds unless the escrow has been concluded. "
             );
@@ -264,8 +265,9 @@ blueprint! {
             .validate_proof(self.obligation_non_fungible_resource)
             .expect("Invalid badge provided");
 
-            let obligation : EscrosObligation = obligation.badge.non_fungible().data();
-            let vault : &mut Vault: self.vaults.get_mut(&obligation.amount_to_get).unwrap();
+            let obligation=: EscrowObligation = obligation_badge.non_fungible().data();
+            let vault: &mut Vault = self.vaults.get_mut(&obligation.amount_to_get).unwrap();
+
             vault.take_all()
         }
 
