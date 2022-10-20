@@ -265,7 +265,7 @@ blueprint! {
             .validate_proof(self.obligation_non_fungible_resource)
             .expect("Invalid badge provided");
 
-            let obligation=: EscrowObligation = obligation_badge.non_fungible().data();
+            let obligation : EscrowObligation = obligation_badge.non_fungible().data();
             let vault: &mut Vault = self.vaults.get_mut(&obligation.amount_to_get).unwrap();
 
             vault.take_all()
