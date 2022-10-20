@@ -120,9 +120,9 @@ blueprint! {
                 amount_to_get: to_be_paid_by_party_1.clone()
                 };
             let escrow_obligations: Bucket = ResourceBuilder::new_non_fungible()
-                .metadata("team-member-1-github-username", "marton.temesvaari@gmail.com")
-                .metadata("team-member-2-github-username", "rebwar.ebrahimi@gmail.com")
-                .metadata("team-member-3-github-username", "arash.poorakbar@yahoo.com")
+                .metadata("team-member-1-github-username", "martontemesvari")
+                .metadata("team-member-2-github-username", "rebvar-ebra")
+                .metadata("team-member-3-github-username", "arashpoorakbar")
                 .metadata("description", *This resource describes the team members.*)
                 .initial_supply([
                    {
